@@ -1,0 +1,305 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body{
+   width: 100%;
+   height: 100vh;
+   background-color: lightcoral;
+}
+
+#header{
+   height: 100%;
+   width: 100%;
+   background-image: url(./B1.jpg);
+   background-position: center;
+   background-size: cover;
+   animation: background 12s ease;
+}
+
+@keyframes background {
+   50%{
+      background-image: url(./B2.jpg);
+      animation-delay: 3s;
+   }
+
+   100%{
+      background-image: url(./B3.jpg);
+      animation-delay: 6s;
+   }
+}
+
+.navbar{
+   position: relative;
+   width: 100%;
+   height: 100%;
+}
+
+.navbar ul{
+   display: flex;
+   padding-top: 20px;
+   padding-left: 40%;
+   gap: 20px;
+}
+
+.navbar ul li{
+   list-style: none;
+}
+
+.navbar ul li a{
+   text-decoration: none;
+   text-transform: uppercase;
+   color: brown;
+   font-weight: 900;
+}
+
+.navbar ul li a:hover{
+   color: black;
+}
+
+.content{
+   width: 50%;
+   margin-top: 10%;
+   padding-left: 5%;
+   color: black;
+}
+
+.content h1{
+   color: transparent;
+   font-size: 2.5rem;
+   font-style: italic;
+   animation: text-reveal 1s ease forwards;
+}
+
+@keyframes text-reveal {
+   100%{
+      color: brown;
+   }
+}
+
+.content p{
+   color: transparent;
+   line-height: 1.3rem;
+   margin-bottom: 10px;
+   animation: p-reveal  ease forwards;
+   animation-delay: 2s;
+   font-weight: 800;
+}
+
+@keyframes p-reveal {
+   100%{
+      color: black;
+   }
+}
+
+.btn{
+   display: inline-block;
+   padding: 10px 10px;
+   background-color: brown;
+   color: black;
+   border-radius: 50px;
+   text-decoration: none;
+   transition: 1s ease;
+}
+
+.btn:hover{
+   background-color: white;
+}
+
+.about{
+   width: 100%;
+   display: relative;
+   align-items: center;
+}
+
+.tittle{
+   color: brown;
+   font-size: 2rem;
+   text-align: center;
+   font-weight: 900;
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+.details{
+   display: flex;
+   flex-direction: row;
+   margin-left: 10px;
+   gap: 10px;
+
+}
+
+.image-about{
+   height: 250px;
+   margin-left: 10px;
+   transition: 1s ease;
+}
+
+.image-about:hover{
+   transform: translateX(10px);
+}
+
+.items h1{
+   text-align: center;
+}
+.items p{
+   width: 100%;
+   text-align: center;
+   padding: 10px;
+}
+/* Product */
+.products{
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+}
+
+.col-3{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   margin: auto;
+   align-items: center;
+   justify-content: center;
+}
+
+.staff{
+   width: 25%;
+   height: 40%;
+   margin-bottom: 20px;
+   box-shadow: 0px 0px 5px 5px;
+   margin-left: 20px;
+   padding: 20px;
+   transition: 1s ease;
+}
+
+.staff:hover{
+   transform: translateY(10px);
+}
+
+.staff h1{
+   color: brown;
+   font-size: 1rem;
+}
+
+.staff p{
+   font-size: .9rem;
+}
+
+.buy{
+   padding: 5px 10px;
+   display: inline-block;
+   background-color: brown;
+   color: pink;
+   border-radius: 50px;
+   text-decoration: none;
+   
+}
+
+.buy:hover{
+   background-color: white;
+}
+/* Offers */
+.offers{
+   width: 100%;
+      justify-content: center;
+      align-items: center;
+}
+
+/* Footer */
+.footer{
+   height: 50%;
+   width: 100%;
+   color: pink;
+   background-color: brown;
+}
+
+.footer h1{
+   color: lightpink;
+   font-weight: 900;
+   text-align: center;
+   padding-top: 30px;
+   padding-bottom: 20px;
+}
+
+.footer p{
+   color: pink;
+   font-size: .9rem;
+   text-align: center;
+   font-weight: 900;
+}
+
+@media screen and (max-width: 468px){
+   body{
+      background-color: pink;
+   }
+   #header {
+         background-image: url(./B1.jpg);
+         background-size: contain;
+         background-repeat: no-repeat;
+         background-position: top;
+      }
+      
+      .navbar ul {
+         display: flex;
+         padding-left: 10%;
+         gap: 20px;
+         padding-top: 80%;
+      }
+   
+      .content {
+         width: 80%;
+      }
+   
+      .content h1 {
+         text-align: center;
+      }
+   
+      .content p {
+         font-size: 1rem;
+         line-height: 1.5rem;
+         text-align: center;
+         margin-top: 30px;
+         margin-bottom: 30px;
+      }
+   
+      .btn {
+         display: inline-block;
+         margin-left: 30%;
+      }
+
+      .details {
+         display: block;
+         box-shadow: none;
+         width: 100%;
+      }
+   
+      .image-about {
+         width: 80%;
+         height: 150px;
+         margin-left: 40px;
+         transition: 1s ease;
+      }
+   
+      .image-about:hover {
+         transform: translateX(10px);
+      }
+   
+      .items {
+         width: 100%;
+         text-align: center;
+         line-height: 1.3rem;
+         font-size: 1rem;
+         padding: 10px 10px;
+      }
+   
+      /* Product */
+
+   
+      .staff {
+         width: 50%;
+      }
+   
+   }
